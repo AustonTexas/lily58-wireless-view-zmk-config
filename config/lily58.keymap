@@ -14,7 +14,11 @@
         Em_Dash: Em_Dash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kp N0 &kp N1 &kp N5 &kp N1 &kt LEFT_ALT>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N1>
+                , <&macro_release &kp LALT>
+    ;
             label = "EM_DASH";
         };
     };
